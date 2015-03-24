@@ -1,0 +1,11 @@
+* TODO Subscription
+** TODO basic reg
+** TODO email validation
+** TODO add user to the mailing list
+** TODO handle resubscriptions 
+*** TODO reject with a nice message
+*** TODO resend the email?
+* TODO T&C
+** TODO modal
+** TODO checkbox
+** TODO reject if not confirmed

@@ -1,0 +1,32 @@
+@import "lib/colors";
+
+#dapplist, .modal{
+  font-family: 'Roboto-Light', sans-serif;
+}
+body{
+  background-color: @bg-tomato;
+}
+#dapplist{
+  .page{
+    background-color: #fff;
+  }
+  p, input, select{
+    color: @text-dark;
+  }
+  h1, label, h2, h3, h4{
+    color: @bg-tomato;
+    font-weight: bold;
+  }
+  .btn-primary{
+    background-color: @bg-tomato;
+    border-color: @bg-tomato;
+    &:hover{
+      background-color: @bg-dark;
+      border-color: @bg-dark;
+    }
+  }
+  .btn{
+    text-transform: uppercase;
+    
+  }
+}
