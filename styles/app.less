@@ -1,10 +1,13 @@
 @import "lib/colors";
 
 #dapplist, .modal{
-  font-family: 'Roboto-Light', sans-serif;
+  font-family: 'Roboto-Medium', sans-serif;
 }
 body{
   background-color: @bg-tomato;
+  #dapplist{
+    color: @text-dark;
+  }
 }
 #dapplist{
   .page{
@@ -13,7 +16,7 @@ body{
   p, input, select{
     color: @text-dark;
   }
-  h1, label, h2, h3, h4{
+  h1,  h2, h3, h4, a{
     color: @bg-tomato;
     font-weight: bold;
   }
@@ -27,6 +30,15 @@ body{
   }
   .btn{
     text-transform: uppercase;
-    
+    font-weight: bold;
+    letter-spacing: 2pt;
   }
+  .has-error{
+    .control-label{
+      color: inherit;
+    }
+    .help-block{
+      color: @bg-tomato;
+    }
+  } 
 }

@@ -1,11 +1,20 @@
 * TODO Subscription
-** TODO basic reg
+** DONE basic reg
+   CLOSED: [2015-03-26 Thu 17:29]
 ** TODO email validation
 ** TODO add user to the mailing list
 ** TODO handle resubscriptions 
 *** TODO reject with a nice message
 *** TODO resend the email?
+** TODO v-center layout 
+*** TODO on window resize
+*** TODO on doc load
+*** TODO on render
+** TODO move centering ui/logic to layout
+** TODO "thanks copy" post-submit
 * TODO T&C
 ** TODO modal
-** TODO checkbox
-** TODO reject if not confirmed
+** DONE checkbox
+   CLOSED: [2015-03-26 Thu 17:06]
+** DONE reject if not confirmed
+   CLOSED: [2015-03-26 Thu 17:06]

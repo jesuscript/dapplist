@@ -9,9 +9,10 @@ SignupSchema = new SimpleSchema({
   },
   acceptedTerms: {
     type: Boolean,
-    label: "",
-    allowedValues: [true]
+    allowedValues: [true],
+    label: "I accept the Terms and Conditions"
   }
 });
+
 
 

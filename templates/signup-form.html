@@ -1,21 +1,26 @@
 <template name="signupForm">
-  <h2>Join us</h2>
-  
-  {{# autoForm schema="SignupSchema" id="signupForm" type="method" methodname="signup" validation="submit"}}
-    {{> afQuickField name="email"  placeholder="Your email address" label=null}}
+  {{# autoForm schema="SignupSchema" id="signupForm" type="method" meteormethod="signup" validation="submit"}}
+    {{> afQuickField name="email"  placeholder="Your email address"}}
     {{> afQuickField name="skillLevel"  options="allowed" firstOption="Your skill level"}}
-
-    <div class="form-group {{#if afFieldIsInvalid name='acceptedTerms'}} has-error{{/if}}">
-
-      <div class="row">
-        <div class="col-xs-6">
-          {{> afFieldInput name="acceptedTerms" }}
-        </div>
-        <div class="col-xs-6">
-          <button type="submit" class="btn btn-primary btn-block">Done</button>
+    <div class="row">
+      <div class="col-xs-7">
+        <div class="form-group ">
+          
+          <label>
+            {{> afFieldInput name="acceptedTerms" type="simple-checkbox" id="terms-checkbox"}}
+            I accept the <a href="#">Terms and Conditions</a>
+          </label>
+          
+          {{#if afFieldIsInvalid name='acceptedTerms'}}
+            <div class="{{#if afFieldIsInvalid name='acceptedTerms'}} has-error{{/if}}">
+              <span class="help-block">You must accept</span>
+            </div>
+          {{/if}}
         </div>
       </div>
-
+      <div class="col-xs-5">
+        <button type="submit" class="btn btn-primary btn-block">Join</button>
+      </div>
     </div>
   {{/autoForm}}
 </template>
