@@ -14,7 +14,13 @@
           </div>
 
           <div class="col-sm-4 col-sm-height col-middle">
-            {{> signupForm}}
+            {{#if $.Session.get "showVerifiedFeedback" }}
+              <p>
+                Congratulations! You have joined DappList. Get involved by sending your first email to <a href="mailto:members@dapplist.net">members@dapplist.net</a>
+              </p>
+            {{else}}
+              {{> signupForm}}
+            {{/if}}
           </div>
           <div class="col-sm-1 col-sm-height col-middle">
           </div>
@@ -22,5 +28,7 @@
       </div>
     </div>
   </div>
+
+  {{> termsModal}}
 </template>
 

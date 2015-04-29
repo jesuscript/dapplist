@@ -20,6 +20,7 @@ body{
     color: @bg-tomato;
     font-weight: bold;
   }
+  
   .btn-primary{
     background-color: @bg-tomato;
     border-color: @bg-tomato;
@@ -38,7 +39,28 @@ body{
       color: inherit;
     }
     .help-block{
-      color: @bg-tomato;
+      color: @blue;
     }
-  } 
+  }
+
+  .modal{
+    .modal-content{
+      overflow: hidden;
+    }
+    .modal-header{
+      background-color: @bg-tomato;
+      h4{
+        color: #fff;
+      }
+    }
+    .close{
+      color: #fff;
+      opacity: 1;
+      text-shadow: none;
+      line-height: 1.35;
+      &:hover{
+        color: #000;
+      }
+    }
+  }
 }

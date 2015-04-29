@@ -1,7 +1,18 @@
+
 Template.homePage.rendered = function(){
-  var $el = $(this.firstNode);
+  var self = this;
   
-  $el.css({
-    top: $(window).height() / 2 - $el.outerHeight() / 2
-  });
+  var vCenter = function(){
+    var $el = $(self.firstNode);
+
+    $el.css({
+      top: $(window).height() / 2 - $el.outerHeight() / 2
+    });
+  };
+
+  $(window).resize(vCenter);
+
+  $("img").load(vCenter);
+
+  vCenter();
 };

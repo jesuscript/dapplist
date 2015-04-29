@@ -1,26 +1,42 @@
 <template name="signupForm">
-  {{# autoForm schema="SignupSchema" id="signupForm" type="method" meteormethod="signup" validation="submit"}}
-    {{> afQuickField name="email"  placeholder="Your email address"}}
-    {{> afQuickField name="skillLevel"  options="allowed" firstOption="Your skill level"}}
-    <div class="row">
-      <div class="col-xs-7">
-        <div class="form-group ">
-          
-          <label>
-            {{> afFieldInput name="acceptedTerms" type="simple-checkbox" id="terms-checkbox"}}
-            I accept the <a href="#">Terms and Conditions</a>
-          </label>
-          
-          {{#if afFieldIsInvalid name='acceptedTerms'}}
-            <div class="{{#if afFieldIsInvalid name='acceptedTerms'}} has-error{{/if}}">
-              <span class="help-block">You must accept</span>
-            </div>
-          {{/if}}
+  {{#if $.Session.get "showFeedback" }}
+    <p>
+      Thank you! You have been send a verification email. Please check your mailbox.
+    </p>
+  {{else}}
+    {{# autoForm schema="SignupSchema" id="signupForm" type="method" meteormethod="signup" validation="submit"}}
+      <div class="row">
+        <div class="col-lg-6">
+          {{> afQuickField name="email"  placeholder="Your email address"}}
+        </div>
+        <div class="col-lg-6">
+          {{> afQuickField name="name" placeholder="(optional) Your name"}}
         </div>
       </div>
-      <div class="col-xs-5">
-        <button type="submit" class="btn btn-primary btn-block">Join</button>
+      
+      {{> afQuickField name="skillLevel"  options="allowed" firstOption="Your skill level"}}
+      <div class="row">
+        <div class="col-xs-7">
+          <div class="form-group ">
+            
+            
+            {{> afFieldInput name="acceptedTerms" type="simple-checkbox" id="terms-checkbox"}}
+            <label for="terms-checkbox">
+              I accept the 
+            </label>
+            <a href="#" data-toggle="modal" data-target="#terms-modal">Terms and Conditions</a>
+            
+            {{#if afFieldIsInvalid name='acceptedTerms'}}
+              <div class="{{#if afFieldIsInvalid name='acceptedTerms'}} has-error{{/if}}">
+                <span class="help-block">You must accept</span>
+              </div>
+            {{/if}}
+          </div>
+        </div>
+        <div class="col-xs-5">
+          <button type="submit" class="btn btn-primary btn-block">Join</button>
+        </div>
       </div>
-    </div>
-  {{/autoForm}}
+    {{/autoForm}}
+  {{/if}}
 </template>

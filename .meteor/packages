@@ -14,3 +14,7 @@ aldeed:collection2
 aldeed:autoform
 stevezhu:lodash
 less
+email
+gfk:mailgun-api
+underscore
+raix:handlebar-helpers

@@ -1,12 +1,7 @@
-console.log("huy");
-
 AutoForm.addInputType("simple-checkbox", {
   template: "afSimpleCheckbox",
   valueOut: function(){
     return this.is(":checked");
-  },
-  valueIn: function(){
-    console.log("val in", arguments);
   },
   contextAdjust: function(context){
     if (context.value === true) {
