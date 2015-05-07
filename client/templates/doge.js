@@ -1,4 +1,4 @@
-var DOGE_PERIOD = 3000,//ms
+var DOGE_PERIOD = 6000,//ms
     DOGE_PROBABILITY = 0.25,
     DOGE_DURATION = 700;//ms
     
